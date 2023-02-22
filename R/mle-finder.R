@@ -1,4 +1,4 @@
-MLE_peudo.inverse <- function(design,outcome){
+MLE_pseudo.inverse <- function(design,outcome){
   return(solve(t(design)%*%design,t(design)%*%outcome))
 }
 
