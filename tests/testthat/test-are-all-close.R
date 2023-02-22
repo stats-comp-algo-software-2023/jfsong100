@@ -1,5 +1,5 @@
 #1) correctly returns TRUE
-test_that("linalg and optim least-sq coincide", {
+test_that("correctly returns TRUE", {
   v = rep(1,10)
   u = rep(1,10)
   expect_true(are_all_close(
@@ -8,7 +8,7 @@ test_that("linalg and optim least-sq coincide", {
 })
 
 #2) correctly returns FALSE
-test_that("linalg and optim least-sq coincide", {
+test_that("correctly returns FALSE because the relative error is above rel_tol", {
   set.seed(1)
   v = rnorm(1)
   u = v+0.1
@@ -19,7 +19,7 @@ test_that("linalg and optim least-sq coincide", {
 
 
 #3) correctly returns FALSE
-test_that("linalg and optim least-sq coincide", {
+test_that("correctly returns FALSE because the absolute error is above abs_tol", {
   set.seed(1)
   v = rnorm(1)
   u = rnorm(1)+10
